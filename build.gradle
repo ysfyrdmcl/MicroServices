@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'org.ysfyrdmcl'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
