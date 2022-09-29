@@ -33,7 +33,7 @@ allprojects{
     dependencies {
         implementation libs.springBoot
         implementation libs.springBootWeb
-        implementation libs.springBootJpa
+        //implementation libs.springBootJpa
         implementation libs.springBootActuator
         implementation libs.springValidation
         implementation libs.mapstruct
@@ -43,6 +43,9 @@ allprojects{
         annotationProcessor libs.lombok
         developmentOnly libs.springBootDevtools
         implementation libs.openApi
+        implementation libs.springOpenFeign
+        implementation libs.javaJWT
+
     }
 }
 configurations {

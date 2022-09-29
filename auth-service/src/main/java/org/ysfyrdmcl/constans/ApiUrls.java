@@ -7,5 +7,6 @@ public class ApiUrls {
     public static final String BASE_URL=VERSION+TYPE;
     public static final String LOGIN = "/dologin";
     public static final String REGISTER = "/register";
+    public static final String NEW_CREATE_USER = "/newcreateuser";
 
 }

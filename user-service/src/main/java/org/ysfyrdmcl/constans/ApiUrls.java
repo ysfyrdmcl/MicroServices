@@ -8,6 +8,7 @@ public class ApiUrls {
     public static final String LOGIN = "/dologin";
     public static final String REGISTER = "/register";
     public static final String USER = "/user";
-    public static final String NEW_USER = "/newuser";
+    public static final String NEW_CREATE_USER = "/newcreateuser";
+    public static final String UPDATE_PROFILE = "/updateprofile";
 
 }
