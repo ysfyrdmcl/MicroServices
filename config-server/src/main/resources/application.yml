@@ -6,3 +6,7 @@ spring:
       server:
         native:
           search-locations: classpath:/configyml
+  application:
+    name: config-server
+  profiles:
+    active: native

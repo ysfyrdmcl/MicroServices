@@ -22,6 +22,10 @@ import java.util.Optional;
 public class AuthController {
     private final AuthService authService;
     private final JwtTokenManager jwtTokenManager;
+    @GetMapping("/test")
+    public String getTestString(){
+        return "Auth Test";
+    }
     @PostMapping(LOGIN)
     public ResponseEntity<String> doLogin(@RequestBody @Valid DoLoginRequest dto){
         Optional<Auth> auth = authService.dologin(dto);
