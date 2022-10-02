@@ -12,7 +12,7 @@ spring:
         - RewritePath=/(?<segment>.*), /v1/api/$\{segment}
       routes:
         - id: auth-service
-          uri: ${AUTHURL}
+          uri: http://localhost:9090
           predicates:
             - Path=/auth/**
         - id: auth-service-swagger
@@ -22,11 +22,11 @@ spring:
           filters:
             - RewritePath=/(?<segment>.*), /swagger-ui/$\{segment}
         - id: main-service
-          uri: ${MAINURL}
+          uri: http://localhost:9092
           predicates:
             - Path=/main/**
         - id: user-service
-          uri: ${USERURL}
+          uri: http://localhost:9091
           predicates:
             - Path=/user/**
           filters:

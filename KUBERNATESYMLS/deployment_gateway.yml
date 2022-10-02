@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gatewayployment
+  name: gatewaydeployment
   labels:
     team: tarismadevelopersteam
 spec:
@@ -15,7 +15,7 @@ spec:
         app: gateway-service
     spec:
       containers:        
-        - image: muhammedali55/yarismauygulamasigateway:v001
+        - image: ysfyrdmcl/questiongameapigateway:v001
           name:  podgateway
           resources:
             requests:

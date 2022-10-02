@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: userployment
+  name: userdeployment
   labels:
     team: tarismadevelopersteam
 spec:
@@ -15,7 +15,7 @@ spec:
         app: user-service
     spec:
       containers:        
-        - image: muhammedali55/yarismauygulamasiuser:v001
+        - image: ysfyrdmcl/questiongameuser:v002
           name:  poduser
           resources:
             requests:
@@ -62,3 +62,8 @@ spec:
                 secretKeyRef:
                   name: yarismasecret
                   key: user_url
+            - name: CONFIGSERVER
+              valueFrom:
+                secretKeyRef:
+                  name: yarismasecret
+                  key: config_server_url       
