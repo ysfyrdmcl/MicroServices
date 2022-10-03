@@ -13,4 +13,6 @@ public class GroupNameClassService extends ServiceManager<GroupNameClass,Long> {
         super(groupNameClassRepository);
         this.groupNameClassRepository = groupNameClassRepository;
     }
+
+
 }

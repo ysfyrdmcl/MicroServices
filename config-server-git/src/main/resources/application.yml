@@ -1,0 +1,14 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/ysfyrdmcl/gitconfigtest.git"
+          default-label: main
+          skip-ssl-validation: true
+#          username: "ysfyrdmcl"
+#          password: ${git_password_or_token}
