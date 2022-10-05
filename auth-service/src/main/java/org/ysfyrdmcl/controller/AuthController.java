@@ -10,7 +10,7 @@ import org.ysfyrdmcl.dto.request.DoLoginRequest;
 import org.ysfyrdmcl.dto.request.RegisterRequestDto;
 import org.ysfyrdmcl.repository.entity.Auth;
 import org.ysfyrdmcl.services.AuthService;
-import org.ysfyrdmcl.utility.JwtTokenManager;
+import org.ysfyrdmcl.config.security.JwtTokenManager;
 
 import javax.validation.Valid;
 import java.util.Optional;

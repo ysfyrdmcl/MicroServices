@@ -10,5 +10,5 @@ import static org.ysfyrdmcl.constans.ApiUrls.*;
 @FeignClient(url = "${raceapplication.url.user}v1/api/user",name = "user-service-userprofile",decode404 = true)
 public interface IUserManager {
     @PostMapping(NEW_CREATE_USER)
-    ResponseEntity<Boolean> NewUserCreate(NewUserCreateDto dto);
+    ResponseEntity<Void> NewUserCreate(NewUserCreateDto dto);
 }

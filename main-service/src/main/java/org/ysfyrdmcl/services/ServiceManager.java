@@ -3,6 +3,7 @@ package org.ysfyrdmcl.services;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.ysfyrdmcl.repository.entity.CompetitionQuestions;
 import org.ysfyrdmcl.repository.entity.State;
 import org.ysfyrdmcl.repository.entity.SuperClass;
 
@@ -17,7 +18,6 @@ public class ServiceManager <T extends  SuperClass,ID> implements IService<T,ID>
         this.service = service;
     }
 
-    @Override
     public T save(T entity) {
         return service.save(entity);
     }

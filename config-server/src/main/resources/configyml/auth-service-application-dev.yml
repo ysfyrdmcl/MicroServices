@@ -1,6 +1,10 @@
 server:
   port: 9090
 spring:
+  security:
+    user:
+      name: yusuf
+      password: 12345
   datasource:
     url: "jdbc:postgresql://localhost:5432/YarismaDB"
     username: postgres
@@ -12,6 +16,6 @@ spring:
     show-sql: true
 raceapplication:
   url:
-    auth: http://localhost:9090/
-    main: http://localhost:9092/
-    user: http://localhost:9091/
+    auth: http://localhost:9090/auth-service/
+    main: http://localhost:9093/main-service/
+    user: http://localhost:9091/user-service/

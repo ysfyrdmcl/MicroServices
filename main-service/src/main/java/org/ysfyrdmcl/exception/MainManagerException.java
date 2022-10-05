@@ -4,14 +4,14 @@ import lombok.Getter;
 
 @Getter
 
-public class UserManagerException extends RuntimeException{
+public class MainManagerException extends RuntimeException{
     private final ErrorType errorType;
 
-    public UserManagerException(ErrorType errorType){
+    public MainManagerException(ErrorType errorType){
         super(errorType.getMessage());
         this.errorType=errorType;
     }
-    public UserManagerException(ErrorType errorType, String cause){
+    public MainManagerException(ErrorType errorType, String cause){
         super(cause);
         this.errorType=errorType;
 

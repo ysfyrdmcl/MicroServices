@@ -18,12 +18,12 @@ public class AnswerService extends ServiceManager<Answer,Long> {
         this.answerRepository = answerRepository;
     }
 
-//    public void save(List<AnswerRequestDto>dto, Long answerid){
-//        dto.stream().forEach(x->save(Answer.builder()
-//                .answer(x.getAnswer())
-//                .istrue(x.isIstrue())
-//                .questionid(answerid)
-//                .build()));
-//
-//    }
+    public void save(List<AnswerRequestDto>dto, Long answerid){
+        dto.stream().forEach(x->save(Answer.builder()
+                .answer(x.getAnswer())
+                .istrue(x.isIstrue())
+                .questionid(answerid)
+                .build()));
+
+    }
 }

@@ -1,5 +1,5 @@
 server:
-  port: 9092
+  port: 9093
 spring:
   datasource:
     url: "jdbc:postgresql://localhost:5432/YarismaDB"
@@ -12,6 +12,6 @@ spring:
     show-sql: true
 raceapplication:
   url:
-    auth: http://localhost:9090/
-    main: http://localhost:9092/
-    user: http://localhost:9091/
+    auth: http://localhost:9090/auth-service/
+    main: http://localhost:9093/main-service/
+    user: http://localhost:9091/user-service/

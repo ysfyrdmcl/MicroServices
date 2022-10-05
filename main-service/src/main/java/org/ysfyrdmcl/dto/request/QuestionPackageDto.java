@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @Builder
 public class QuestionPackageDto {
+    private String token;
     private QuestionRequestDto que;
     private List<AnswerRequestDto> answers;
 }

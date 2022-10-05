@@ -14,30 +14,28 @@ import java.util.List;
 @Service
 public class QuestionService extends ServiceManager<Question,Long> {
     private final QuestionRepository questionRepository;
-//    private final AnswerService answerService;
+    private final AnswerService answerService;
 
     public QuestionService(QuestionRepository questionRepository,AnswerService answerService) {
         super(questionRepository);
         this.questionRepository = questionRepository;
-       // this.answerService=answerService;
+        this.answerService=answerService;
     }
 
-//    public void save(QuestionPackageDto questionPackageDto){
-//        QuestionRequestDto questionRequestDto = questionPackageDto.getQue();
-//        List<AnswerRequestDto> answerRequestDtolist= questionPackageDto.getAnswers();
-////        if(questionRequestDto.getQuestion()==null){
-////
-////        }
-//        Question question = Question.builder()
-//                .question(questionRequestDto.getQuestion())
-//                .createdByUserId(questionRequestDto.getCreatedByUserId())
-//                .howManyOption(answerRequestDtolist.size())
-//                .questiontime(questionRequestDto.getQuestiontime())
-//                .build();
-//        save(question);
-//
-//        answerService.save(answerRequestDtolist,question.getId());
-//
-//
-//    }
+    public void save(QuestionPackageDto dto){
+        QuestionRequestDto questionRequestDto = dto.getQue();
+        List<AnswerRequestDto> answerRequestDtolist= dto.getAnswers();
+
+        Question question = Question.builder()
+                .question(questionRequestDto.getQuestion())
+                .createdByUserId(questionRequestDto.getCreatedByUserId())
+                .howManyOption(answerRequestDtolist.size())
+                .questiontime(questionRequestDto.getQuestiontime())
+                .build();
+        save(question);
+
+        answerService.save(answerRequestDtolist,question.getId());
+
+
+    }
 }

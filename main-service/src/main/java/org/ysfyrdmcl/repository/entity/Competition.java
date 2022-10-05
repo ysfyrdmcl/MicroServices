@@ -20,8 +20,8 @@ public class Competition extends SuperClass{
     String competitiontitle;
     @Transient
     List<Question> questionlist;
-
-    Long rankid;
+    String image;
+    int winners;
 //    @Transient
 //     List<User> userlist;
     @Column(name ="creator_id")

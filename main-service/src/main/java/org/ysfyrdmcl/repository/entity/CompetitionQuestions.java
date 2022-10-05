@@ -20,7 +20,7 @@ public class CompetitionQuestions extends SuperClass{
     Long questionid;
     Long competitionid;
     Long timeperquestion;
-    int howManyChoice;
+   // int howManyChoice;
 //    @Transient
 //    List<User>trueanswersbyusers;
 //    @Transient

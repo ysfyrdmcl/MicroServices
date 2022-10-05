@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class AnswerRequestDto {
-
-    String answer;
-    boolean istrue;
+public class CompetitionQuestionRequestDto {
+    String token;
+    Long questionid;
+    Long competitionid;
+    Long timeperquestion;
+    //int howManyOption;
 }

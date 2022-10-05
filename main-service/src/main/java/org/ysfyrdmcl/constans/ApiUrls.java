@@ -10,7 +10,11 @@ public class ApiUrls {
     public static final String LOGIN = "/dologin";
     public static final String REGISTER = "/register";
     public static final String USER = "/user";
+    public static final String CREATE = "/create";
     public static final String GROUP_NAME = "/groupname";
+    public static final String QUESTION = "/question";
+    public static final String COMPETITION = "/competition";
+    public static final String COMPETITIONQUESTIONS = "/competitionquestions";
     public static final String CREATE_GROUP_NAME = "/creategroupname";
     public static final String NEW_CREATE_USER = "/newcreateuser";
 
