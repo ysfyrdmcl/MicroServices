@@ -4,6 +4,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.stereotype.Service;
+import org.ysfyrdmcl.repository.enums.Roles;
 
 
 import java.util.Date;
@@ -61,4 +62,5 @@ public class JwtTokenManager {
         }
 
     }
+
 }

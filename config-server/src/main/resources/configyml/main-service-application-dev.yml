@@ -1,6 +1,11 @@
 server:
   port: 9093
 spring:
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    service:
+      name: main-service
   datasource:
     url: "jdbc:postgresql://localhost:5432/YarismaDB"
     username: postgres
@@ -8,10 +13,10 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
 raceapplication:
   url:
-    auth: http://localhost:9090/auth-service/
-    main: http://localhost:9093/main-service/
-    user: http://localhost:9091/user-service/
+    auth: http://localhost:9090
+    main: http://localhost:9093
+    user: http://localhost:9091

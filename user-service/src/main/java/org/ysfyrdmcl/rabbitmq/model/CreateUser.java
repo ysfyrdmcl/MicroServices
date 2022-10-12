@@ -1,18 +1,19 @@
-package org.ysfyrdmcl.dto.request;
+package org.ysfyrdmcl.rabbitmq.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.ysfyrdmcl.repository.enums.Roles;
+
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-public class NewUserCreateDto {
-    Long authId;
+public class CreateUser implements Serializable {
+    Long authid;
     String username;
+    String password;
     String email;
-    Roles role;
 }

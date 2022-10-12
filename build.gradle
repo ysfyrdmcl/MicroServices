@@ -34,6 +34,8 @@ allprojects{
         implementation libs.springBoot
         implementation libs.springBootWeb
         //implementation libs.springBootJpa
+        implementation libs.springCloudSleuthZipkin
+        implementation libs.springCloudStarterSleuth
         implementation libs.springBootActuator
         implementation libs.springValidation
         implementation libs.mapstruct
